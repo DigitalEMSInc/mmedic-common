@@ -8,19 +8,19 @@ namespace DigitalEmsInc\Common\Nemsis;
  */
 class SignatureDateTimeService
 {
-    public const string SIGNATURE_FACILITY_DATETIME = 'signatures_facility_datetime';
-    public const string TI_AT_FACILITY_DATE = 'TI_AtFacilityDate';
-    public const string TI_AT_FACILITY_TIME = 'TI_AtFacilityTime';
-    public const string TI_LEFT_SCENE_DATE = 'TI_LeftSceneDate';
-    public const string TI_LEFT_SCENE_TIME = 'TI_LeftSceneTime';
-    public const string TI_AT_PATIENT_DATE = 'TI_AtPatientDate';
-    public const string TI_AT_PATIENT_TIME = 'TI_AtPatientTime';
-    public const string TI_ARRIVAL_DATE = 'TI_ArrivalDate';
-    public const string TI_ARRIVAL_TIME = 'TI_ArrivalTime';
-    public const string TI_DISPATCH_DATE = 'TI_DispatchDate';
-    public const string TI_DISPATCH_TIME = 'TI_DispatchTime';
-    public const string II_INCIDENT_DATE = 'II_IncidentDate';
-    public const string II_INCIDENT_TIME = 'II_IncidentTime';
+    public const SIGNATURE_FACILITY_DATETIME = 'signatures_facility_datetime';
+    public const TI_AT_FACILITY_DATE = 'TI_AtFacilityDate';
+    public const TI_AT_FACILITY_TIME = 'TI_AtFacilityTime';
+    public const TI_LEFT_SCENE_DATE = 'TI_LeftSceneDate';
+    public const TI_LEFT_SCENE_TIME = 'TI_LeftSceneTime';
+    public const TI_AT_PATIENT_DATE = 'TI_AtPatientDate';
+    public const TI_AT_PATIENT_TIME = 'TI_AtPatientTime';
+    public const TI_ARRIVAL_DATE = 'TI_ArrivalDate';
+    public const TI_ARRIVAL_TIME = 'TI_ArrivalTime';
+    public const TI_DISPATCH_DATE = 'TI_DispatchDate';
+    public const TI_DISPATCH_TIME = 'TI_DispatchTime';
+    public const II_INCIDENT_DATE = 'II_IncidentDate';
+    public const II_INCIDENT_TIME = 'II_IncidentTime';
     
     /**
      * Get facility signature datetime.

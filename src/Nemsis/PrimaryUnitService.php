@@ -7,9 +7,9 @@ namespace DigitalEmsInc\Common\Nemsis;
  */
 class PrimaryUnitService
 {
-    private const string TI_AT_FACILITY_DATE = 'TI_AtFacilityDate';
-    private const string TI_AT_FACILITY_TIME = 'TI_AtFacilityTime';
-    private const string TI_UNIT = 'TI_Unit';
+    private const TI_AT_FACILITY_DATE = 'TI_AtFacilityDate';
+    private const TI_AT_FACILITY_TIME = 'TI_AtFacilityTime';
+    private const TI_UNIT = 'TI_Unit';
     
     /**
      * Get primary Unit index in fieldset.
