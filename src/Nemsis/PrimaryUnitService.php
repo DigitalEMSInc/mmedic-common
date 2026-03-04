@@ -2,6 +2,8 @@
 
 namespace DigitalEmsInc\Common\Nemsis;
 
+use DigitalEmsInc\Common\Misc\TemplateVersionCheck;
+
 /**
  * Service to determine primary unit index.
  */
@@ -12,6 +14,15 @@ class PrimaryUnitService
     private const TI_UNIT = 'TI_Unit';
     
     /**
+     * Service to determine primary unit index.
+     *
+     * @param TemplateVersionCheck $templateVersionCheck
+     */
+    public function __construct(private readonly TemplateVersionCheck $templateVersionCheck)
+    {
+    }
+    
+    /**
      * Get primary Unit index in fieldset.
      *
      * @param array<string, mixed> $incidentData Incident data.
@@ -20,6 +31,15 @@ class PrimaryUnitService
      */
     public function getPrimaryUnitIndex(array $incidentData): int
     {
+        if (array_key_exists('loginResponse', $incidentData)
+            && is_array($incidentData['loginResponse'])
+            && array_key_exists('templateName', $incidentData['loginResponse'])
+            && is_string($incidentData['loginResponse']['templateName'])
+            && $this->templateVersionCheck->supportsPrimaryUnit($incidentData['loginResponse']['templateName'])
+        ) {
+            return 1;
+        }
+        
         /**
          * List of unit indexes which has filled in AtFacility time.
          */
