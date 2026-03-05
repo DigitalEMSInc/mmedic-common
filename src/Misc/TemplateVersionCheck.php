@@ -10,15 +10,40 @@ class TemplateVersionCheck
     private const PRIMARY_UNIT_SUPPORT_TEMPLATE = '11.1.50';
     
     /**
+     * Extracts template name from incident data login response.
+     *
+     * @param array $incidentData Incident data
+     *
+     * @return string|null
+     */
+    public function getTemplateNameFromIncidentData(array $incidentData): ?string
+    {
+        if (array_key_exists('loginResponse', $incidentData)
+            && is_array($incidentData['loginResponse'])
+            && array_key_exists('templateName', $incidentData['loginResponse'])
+            && is_string($incidentData['loginResponse']['templateName'])
+        ) {
+            return $incidentData['loginResponse']['templateName'];
+        }
+        return null;
+    }
+    
+    /**
      * Check if the template supports primary units.
      *
-     * @param string $templateName Template name to check
+     * @param string|array $value Template name to check or whole incident data
      *
      * @return bool
      */
-    public function supportsPrimaryUnit(string $templateName): bool
+    public function supportsPrimaryUnit(string|array $value): bool
     {
-        return $this->templateIsGreaterOrEqualThen($templateName, self::PRIMARY_UNIT_SUPPORT_TEMPLATE);
+        if (is_string($value)) {
+            $templateName = $value;
+        } else {
+            $templateName = $this->getTemplateNameFromIncidentData($value);
+        }
+        return $templateName
+            && $this->templateIsGreaterOrEqualThen($templateName, self::PRIMARY_UNIT_SUPPORT_TEMPLATE);
     }
     
     /**
