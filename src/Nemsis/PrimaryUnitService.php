@@ -31,12 +31,7 @@ class PrimaryUnitService
      */
     public function getPrimaryUnitIndex(array $incidentData): int
     {
-        if (array_key_exists('loginResponse', $incidentData)
-            && is_array($incidentData['loginResponse'])
-            && array_key_exists('templateName', $incidentData['loginResponse'])
-            && is_string($incidentData['loginResponse']['templateName'])
-            && $this->templateVersionCheck->supportsPrimaryUnit($incidentData['loginResponse']['templateName'])
-        ) {
+        if ($this->templateVersionCheck->supportsPrimaryUnit($incidentData)) {
             return 1;
         }
         
