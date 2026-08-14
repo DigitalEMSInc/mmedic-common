@@ -19,7 +19,7 @@ class ReceivingFacilityMap
         'CAL' => ['20045', 'California Hospital Medical Center'],
         'CHH' => ['20062', 'Children\'s Hospital Los Angeles'],
         'CHI' => ['20066', 'Chino Valley Medical Center'],
-        'CHO' => ['20063', 'Children\'s Hospital of Orange County'],
+        'CHO' => ['20063', 'Rady Children\'s Hospital Orange County'],
         'CHP' => ['20081', 'Community Hospital of Huntington Park'],
         'CNT' => ['20055', 'Centinela Hospital Medical Center'],
         'CPM' => ['20073', 'Coast Plaza Hospital'],
@@ -122,5 +122,6 @@ class ReceivingFacilityMap
         'SMC' => ['20455', 'St. Joseph Hospital, Orange'],
         'GMC' => ['20530', 'Anaheim Global Medical Center'],
         'CVH' => ['20771', 'Chino Valley Health Care Center'],
+        'XML' => ['62864', 'Respite & Sobering Center – MLK Campus'],
     ];
 }
