@@ -93,7 +93,7 @@ class ReceivingFacilityMap
         'SPP' => ['20356', 'Providence Little Company of Mary Medical Center, San Pedro'],
         'TOR' => ['20496', 'Torrance Memorial Medical Center'],
         'TRM' => ['20361', 'Providence Tarzana Medical Center'],
-        'UCI' => ['20509', 'University of California, Irvine Medical Center'],
+        'UCI' => ['20509', 'UCI Health - Orange'],
         'UCL' => ['20377', 'Ronald Reagan UCLA Medical Center'],
         'USC' => ['20242', 'LAC USC Medical Center'],
         'LMC' => ['20242', 'LAC USC Medical Center'],
@@ -121,7 +121,6 @@ class ReceivingFacilityMap
         'WAM' => ['20527', 'West Anaheim Medical Center'],
         'SMC' => ['20455', 'St. Joseph Hospital, Orange'],
         'GMC' => ['20530', 'Anaheim Global Medical Center'],
-        'CVH' => ['20771', 'Chino Valley Health Care Center'],
         'XML' => ['62864', 'Respite & Sobering Center – MLK Campus'],
         // Out-of-county facilities added by the LA County 2026-06 (3.5.1) data dictionary:
         'ABK' => ['20389', 'Adventist Health Bakersfield'],
@@ -151,5 +150,7 @@ class ReceivingFacilityMap
         'UCO' => ['20509', 'UCI Health - Orange'],
         'UCS' => ['20510', 'University of California, San Diego Medical Center'],
         'VCM' => ['20516', 'Ventura County Medical Center'],
+        // Added by the LA County 2026-09 (3.5.1 revised) data dictionary:
+        'UHI' => ['65100', 'UCI Health - Irvine'],
     ];
 }
