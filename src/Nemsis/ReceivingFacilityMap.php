@@ -147,7 +147,6 @@ class ReceivingFacilityMap
         'RVC' => ['20374', 'Riverside Community Hospital'],
         'RUH' => ['20375', 'Riverside University Health System Medical Center'],
         'SBN' => ['20444', 'St. Bernardine Medical Center'],
-        'UCO' => ['20509', 'UCI Health - Orange'],
         'UCS' => ['20510', 'University of California, San Diego Medical Center'],
         'VCM' => ['20516', 'Ventura County Medical Center'],
         // Added by the LA County 2026-09 (3.5.1 revised) data dictionary:
